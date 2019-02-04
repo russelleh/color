@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var input = document.getElementsByTagName("input")[0];
   input.addEventListener('keyup', function(e) {
-    color = colors[e.target.value];
+    var inputValue = e.target.value.toLowerCase();
+    color = colors[inputValue];
     document.getElementsByTagName("BODY")[0].style.backgroundColor = color;
   });
 
