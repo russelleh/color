@@ -1,17 +1,6 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
-  var colors = {};
-  var color  = 'red';
-  var raw    = new XMLHttpRequest();
-  raw.open("GET", './rgb.json', false);
-  raw.onreadystatechange = function () {
-    if(raw.readyState === 4) {
-      if(raw.status === 200 || raw.status === 0) {
-        colors = JSON.parse(raw.responseText);
-      }
-    }
-  }
-  raw.send(null);
+const colors = require("./rgb.json")
 
+document.addEventListener("DOMContentLoaded", function(event) {
   var input = document.getElementsByTagName("input")[0];
   input.addEventListener('keyup', function(e) {
     var inputValue = e.target.value.toLowerCase();
