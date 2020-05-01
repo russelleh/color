@@ -14,5 +14,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var e = document.createEvent('HTMLEvents');
   e.initEvent('keyup', false, true);
   input.dispatchEvent(e);
-  input.focus();
 });
